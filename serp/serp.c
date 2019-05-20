@@ -190,7 +190,7 @@ static int serp_init(void)
 	LCR &= ~UART_LCR_DLAB;
 	outb(LCR , PORT + UART_LCR); // DLAB 0
 	
-	LCR = UART_LCR_WLEN8 | UART_LCR_STOP | UART_LCR_PARITY | UART_LCR_EPAR; // Word Length: 8 bits, Parity: Evan, Stop Bits: 2
+	LCR = UART_LCR_WLEN8 | UART_LCR_STOP | UART_LCR_PARITY | UART_LCR_EPAR; // Word Length: 8 bits, Parity: Even, Stop Bits: 2
 
 	outb(LCR , PORT + UART_LCR);
 	outb(0 , PORT + UART_IER);
